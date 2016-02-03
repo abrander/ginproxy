@@ -11,7 +11,7 @@ import (
 
 func main() {
 	router := gin.Default()
-	g, _ := gingproxy.NewGinProxy("http://backend01.example.com/")
+	g, _ := ginproxy.NewGinProxy("http://backend01.example.com/")
 	router.Any("/api/*all", g.Handler)
 	router.Run(":8080")
 }
